@@ -1,19 +1,19 @@
 export const navItems = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/who-we-are' },
-  { label: 'Our Programs', to: '/projects' },
   { label: 'What We Do', to: '/what-we-do' },
+  { label: 'Our Programs', to: '/projects' },
+  { label: 'Get Involved', to: '/get-involved' },
   { label: 'Partnerships', to: '/partnerships' },
-  { label: 'Our Impact', to: '/our-impact' },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact Us', to: '/contact' },
 ];
-
 export const footerQuickLinks = [
   { label: 'Home', to: '/' },
   { label: 'About HSD', to: '/who-we-are' },
   { label: 'What We Do', to: '/what-we-do' },
   { label: 'Projects', to: '/projects' },
+  { label: 'Get Involved', to: '/get-involved' },
   { label: 'Partnerships', to: '/partnerships' },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact', to: '/contact' },
@@ -37,13 +37,4 @@ export const values = [
     title: 'Sustainability',
     description: 'Our work is designed to create lasting value through local ownership, practical capacity-building, and systems that endure beyond a single initiative.'
   },
-];
-
-export const impactStats = [
-  { value: '10K+', label: 'People reached' },
-  { value: '32', label: 'Communities supported' },
-  { value: '18', label: 'Projects initiated' },
-  { value: '40+', label: 'Partnerships' },
-  { value: '750+', label: 'Volunteers engaged' },
-  { value: '27', label: 'Programs conducted' },
 ];

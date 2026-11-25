@@ -67,7 +67,7 @@ export default function Footer() {
               <li><Link to="/who-we-are" className="transition-colors hover:text-[#75C8FF]">Who We Are</Link></li>
               <li><Link to="/what-we-do" className="transition-colors hover:text-[#75C8FF]">What We Do</Link></li>
               <li><Link to="/projects" className="transition-colors hover:text-[#75C8FF]">Our Projects</Link></li>
-              <li><Link to="/our-impact" className="transition-colors hover:text-[#75C8FF]">Our Impact</Link></li>
+              <li><Link to="/get-involved" className="transition-colors hover:text-[#75C8FF]">Get Involved</Link></li>
               <li><Link to="/blog" className="transition-colors hover:text-[#75C8FF]">Latest News</Link></li>
             </ul>
           </div>
@@ -82,7 +82,7 @@ export default function Footer() {
               <li><Link to="/partnerships" className="transition-colors hover:text-[#75C8FF]">Our Partners</Link></li>
               <li><Link to="/what-we-do" className="transition-colors hover:text-[#75C8FF]">Our Programs</Link></li>
               <li><Link to="/projects" className="transition-colors hover:text-[#75C8FF]">Featured Projects</Link></li>
-              <li><Link to="/contact" className="transition-colors hover:text-[#75C8FF]">Get Involved</Link></li>
+              <li><Link to="/get-involved" className="transition-colors hover:text-[#75C8FF]">Get Involved</Link></li>
               <li><Link to="/contact" className="transition-colors hover:text-[#75C8FF]">Contact Us</Link></li>
             </ul>
           </div>

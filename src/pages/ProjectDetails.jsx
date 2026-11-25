@@ -1,9 +1,10 @@
 import { Link, useParams } from 'react-router-dom';
-import Breadcrumbs from '../components/Breadcrumbs';
+import Icon from '../components/Icon';
 import { projects } from '../data/projects';
 
-export default function ProjectDetails() {
-  const { slug } = useParams();
+export default function ProjectDetails({ projectSlug }) {
+  const { slug: routeSlug } = useParams();
+  const slug = projectSlug ?? routeSlug;
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
@@ -21,20 +22,62 @@ export default function ProjectDetails() {
 
   return (
     <>
-      <section className="section-shell project-detail-hero">
-        <div className="max-width-shell">
-          <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'Projects', to: '/projects' }, { label: project.title, to: `/projects/${project.slug}` }]} />
-          <div className="project-detail-header">
-            <div className="project-detail-copy">
-              <span className="eyebrow">{project.category}</span>
-              <h1>{project.title}</h1>
-              <p>{project.shortDescription}</p>
-              <div className="project-detail-meta">
-                <span><strong>Location:</strong> {project.location}</span>
-                <span><strong>Status:</strong> {project.status}</span>
-              </div>
+      <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#102D46] sm:min-h-[460px] lg:min-h-[500px]">
+        <div
+          className="absolute inset-0 -z-20 bg-cover bg-center"
+          style={{ backgroundImage: `url('${project.image}')` }}
+        />
+        <div className="absolute inset-0 -z-10 bg-[#102D46]/55" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#102D46]/90 via-[#102D46]/65 to-[#102D46]/20" />
+
+        <div className="pointer-events-none absolute right-12 top-12 hidden h-24 w-24 rounded-tr-[45px] border-r-2 border-t-2 border-[#75C8FF]/70 lg:block" />
+
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+          <div className="max-w-3xl translate-y-6 sm:translate-y-7">
+            <div className="mb-6 inline-flex items-center gap-3">
+              <span className="text-sm font-bold uppercase tracking-[0.22em] text-[#75C8FF]">
+                {project.category}
+              </span>
             </div>
-            <img src={project.image} alt={project.title} className="project-detail-image" />
+
+            <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-7xl">
+              {project.title}
+            </h1>
+
+            <p className="mt-7 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+              {project.shortDescription}
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/75">
+              <span>
+                <strong className="font-semibold text-white">Location:</strong>{' '}
+                {project.location}
+              </span>
+              <span>
+                <strong className="font-semibold text-white">Status:</strong>{' '}
+                {project.status}
+              </span>
+            </div>
+
+            <div className="mt-9 flex flex-wrap items-center gap-3 text-sm">
+              <Link
+                to="/"
+                className="font-medium text-white/65 transition-colors hover:text-[#75C8FF]"
+              >
+                Home
+              </Link>
+              <Icon name="chevron_right" className="text-white/40" />
+              <Link
+                to="/projects"
+                className="font-medium text-white/65 transition-colors hover:text-[#75C8FF]"
+              >
+                Our Programs
+              </Link>
+              <Icon name="chevron_right" className="text-white/40" />
+              <span className="font-semibold text-[#75C8FF]">
+                {project.title}
+              </span>
+            </div>
           </div>
         </div>
       </section>

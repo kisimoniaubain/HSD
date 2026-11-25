@@ -507,7 +507,7 @@ h3 { font-size: 1.05rem; }
 .section-heading-row h2 { margin-top: 16px; }
 .light-heading h2 { color: var(--hsd-white); }
 
-.values-grid, .work-grid, .project-grid, .news-grid, .impact-grid, .columns-grid, .team-grid, .initiative-grid, .steps-grid, .testimonial-grid, .gallery-grid, .info-grid { display: grid; gap: 20px; }
+.values-grid, .work-grid, .project-grid, .news-grid, .impact-grid, .columns-grid, .initiative-grid, .steps-grid, .testimonial-grid, .gallery-grid, .info-grid { display: grid; gap: 20px; }
 .values-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .value-card, .work-card, .project-card, .news-card, .info-card, .initiative-card, .step-card, .testimonial-card, .faq-item, .bullet-card, .story-highlight, .mini-contact-card {
   background: var(--hsd-white);
@@ -879,44 +879,6 @@ h3 { font-size: 1.05rem; }
 .bullet-card .material-symbols {
   color: var(--hsd-blue);
   font-size: 20px;
-}
-
-.team-wrap {
-  background: linear-gradient(135deg, var(--hsd-dark) 0%, #163b60 100%);
-  color: var(--hsd-white);
-}
-.team-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
-.team-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 26px;
-  padding: 22px 18px;
-  text-align: center;
-}
-.team-avatar { width: 160px; height: 160px; margin: 0 auto 18px; border-radius: 50%; overflow: hidden; border: 4px solid rgba(255,255,255,0.18); }
-.team-avatar img { width: 100%; height: 100%; object-fit: cover; }
-.team-body h3 { color: var(--hsd-white); }
-.team-role {
-  margin-top: 8px;
-  color: var(--hsd-blue-soft);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-.team-copy { margin-top: 12px; color: rgba(255,255,255,0.8); }
-.social-row { display: flex; justify-content: center; gap: 10px; margin-top: 18px; }
-.social-row a,
-.social-row > span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--hsd-white);
 }
 
 .initiative-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1363,7 +1325,6 @@ h3 { font-size: 1.05rem; }
   .news-grid,
   .impact-grid,
   .values-grid,
-  .team-grid,
   .initiative-grid,
   .columns-grid,
   .three-up,
@@ -1413,7 +1374,6 @@ h3 { font-size: 1.05rem; }
   .news-grid,
   .impact-grid,
   .values-grid,
-  .team-grid,
   .initiative-grid,
   .columns-grid,
   .three-up,

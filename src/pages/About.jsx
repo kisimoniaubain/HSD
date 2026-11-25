@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import CallToAction from '../components/CallToAction';
-import TeamMemberCard from '../components/TeamMemberCard';
 import Icon from '../components/Icon';
 
 const teamMembers = [
@@ -591,101 +589,92 @@ export default function About() {
   </div>
 </section>
 
-<section className="bg-slate-900 py-20 sm:py-24 lg:py-28">
-  <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
-    {/* HEADER */}
-    <div className="mb-14 max-w-3xl">
-      <span className="mb-5 block text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
-        Our Team
-      </span>
-
-      <h2 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
-        Meet the People Behind
-        <span className="text-cyan-400"> the Dream.</span>
-      </h2>
-
-      <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-        Our work is driven by people committed to creating opportunities,
-        empowering communities and supporting meaningful change.
-      </p>
-    </div>
-
-    {/* TEAM MEMBERS */}
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-4">
-
-      {[
-        {
-          position: "Executive Director",
-          number: "01",
-        },
-        {
-          position: "Programs Manager",
-          number: "02",
-        },
-        {
-          position: "Finance & Administration Officer",
-          number: "03",
-        },
-        {
-          position: "Community Engagement Coordinator",
-          number: "04",
-        },
-      ].map((member) => (
-        <article key={member.number} className="group rounded-lg bg-slate-800 p-5 shadow-md transition-transform hover:scale-105 hover:shadow-lg">
-          <div className="relative mb-5 flex aspect-[4/5] items-center justify-center overflow-hidden bg-cyan-900">
-            <span className="text-6xl font-extrabold text-cyan-400/20">
-              {member.number}
-            </span>
-            <span className="absolute bottom-4 left-4 text-xs font-semibold uppercase tracking-widest text-cyan-400">
-              HSD Leadership
-            </span>
-          </div>
-
-          <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-cyan-400">
-            Leadership Team
-          </span>
-
-          <h3 className="text-lg font-bold leading-snug text-white transition-colors group-hover:text-cyan-400">
-            {member.position}
-          </h3>
-
-          <p className="mt-2 text-sm leading-6 text-slate-400">
-            Team member profile coming soon.
-          </p>
-        </article>
-      ))}
-
-    </div>
-  </div>
-</section>
-
-
-      <section className="section-shell team-wrap">
-        <div className="max-width-shell">
-          <div className="section-heading-row light-heading">
+      <section className="bg-[linear-gradient(135deg,#102D46_0%,#163b60_100%)] py-[84px] text-white max-[680px]:py-14">
+        <div className="mx-auto w-[calc(100%-32px)] max-w-[1200px]">
+          <div className="mb-6 flex items-end justify-between gap-5">
             <div>
-              <span className="eyebrow light">Leadership</span>
-              <h2>People who help turn shared vision into real action.</h2>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.18] bg-white/[0.12] px-3.5 py-[7px] text-[10px] font-extrabold tracking-[0.1em] text-white uppercase">
+                Leadership
+              </span>
+              <h2 className="mt-4 text-[clamp(1.55rem,2.4vw,2.25rem)] leading-[1.16] text-white">
+                People who help turn shared vision into real action.
+              </h2>
             </div>
           </div>
-          <div className="team-grid">
+          <div className="grid grid-cols-4 gap-5 max-[980px]:grid-cols-2 max-[680px]:grid-cols-1">
             {teamMembers.map((person) => (
-              <TeamMemberCard key={person.name} person={person} />
+              <article
+                key={person.name}
+                className="rounded-[26px] bg-white/[0.04] px-[18px] py-[22px] text-center"
+              >
+                <div className="mx-auto mb-[18px] h-40 w-40 overflow-hidden rounded-full border-4 border-white/[0.18]">
+                  <img
+                    className="h-full w-full object-cover"
+                    src={person.image}
+                    alt={person.name}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-white">{person.name}</h3>
+                  <p className="mt-2 text-[11px] font-extrabold tracking-[0.08em] text-[#DFF1FC] uppercase">
+                    {person.title}
+                  </p>
+                  <p className="mt-3 text-white/80">{person.text}</p>
+                  <div className="mt-[18px] flex justify-center gap-[10px]">
+                    <a
+                      className="inline-flex h-[34px] w-[34px] items-center justify-center rounded-full border border-white/[0.12] bg-white/[0.08] text-white"
+                      href={`https://mail.google.com/mail/?${new URLSearchParams({
+                        view: 'cm',
+                        fs: '1',
+                        ...(person.email ? { to: person.email } : {}),
+                        su: `Message for ${person.name}`,
+                        body: `Hello ${person.name},\n\n`,
+                      }).toString()}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Email ${person.name}`}
+                    >
+                      <Icon name="mail" className="material-symbols" />
+                    </a>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <CallToAction
-        eyebrow="Continue exploring"
-        title="Learn more about HSD's work and how you can contribute."
-        description="Whether you are a community partner, donor, volunteer, or institution, we welcome the opportunity to connect."
-        primaryLabel="Explore our work"
-        primaryTo="/what-we-do"
-        secondaryTo="/contact"
-        secondaryLabel="Contact us"
-      />
+      <section className="bg-white">
+        <div className="px-9 py-[104px] text-center text-[#102D46] max-[680px]:px-5 max-[680px]:py-10">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#0F92E4]/[0.12] bg-[#0F92E4]/[0.08] px-3.5 py-[7px] text-[10px] font-extrabold tracking-[0.1em] text-[#0F92E4] uppercase">
+              Continue exploring
+            </span>
+            <h2 className="mt-[18px] text-[clamp(1.55rem,2.4vw,2.25rem)] leading-[1.16] text-[#102D46]">
+              Learn more about HSD's work and how you can contribute.
+            </h2>
+            <p className="mx-auto mt-[18px] max-w-[700px] text-[#475467]">
+              Whether you are a community partner, donor, volunteer, or
+              institution, we welcome the opportunity to connect.
+            </p>
+            <div className="relative z-10 mt-[26px] flex flex-wrap justify-center gap-[14px] max-[680px]:flex-col max-[680px]:items-stretch">
+              <Link
+                to="/what-we-do"
+                className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full border border-transparent bg-[#0F92E4] px-[22px] text-[0.92rem] font-bold tracking-[-0.01em] text-white shadow-[0_10px_20px_rgba(15,146,228,0.2)] transition duration-200 hover:-translate-y-px hover:bg-[#0B7BC3] max-[680px]:w-full"
+              >
+                Explore our work
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full border border-[#0F92E4]/25 bg-white px-[22px] text-[0.92rem] font-bold tracking-[-0.01em] text-[#0F92E4] transition duration-200 hover:-translate-y-px hover:bg-[#0F92E4]/[0.05] max-[680px]:w-full"
+              >
+                Contact us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

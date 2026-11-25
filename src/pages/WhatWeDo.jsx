@@ -1,5 +1,6 @@
 import CallToAction from '../components/CallToAction';
-import PageHero from '../components/PageHero';
+import { Link } from 'react-router-dom';
+import Icon from '../components/Icon';
 
 const workAreas = [
   {
@@ -55,12 +56,47 @@ const workAreas = [
 export default function WhatWeDo() {
   return (
     <>
-      <PageHero
-        tag="What we do"
-        title="Programs designed to unlock potential."
-        intro="HSD works at the intersection of education, leadership, and community development to build systems that help people move from potential into practical opportunity."
-        image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
-      />
+      <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#102D46] sm:min-h-[460px] lg:min-h-[500px]">
+        <div
+          className="absolute inset-0 -z-20 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80')",
+          }}
+        />
+        <div className="absolute inset-0 -z-10 bg-[#102D46]/55" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#102D46]/90 via-[#102D46]/65 to-[#102D46]/20" />
+        <div className="pointer-events-none absolute right-12 top-12 hidden h-24 w-24 rounded-tr-[45px] border-r-2 border-t-2 border-[#75C8FF]/70 lg:block" />
+
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+          <div className="max-w-3xl translate-y-6 sm:translate-y-7">
+            <div className="mb-6 inline-flex items-center gap-3">
+              <span className="text-sm font-bold uppercase tracking-[0.22em] text-[#75C8FF]">
+                What We Do
+              </span>
+            </div>
+            <h1 className="text-4xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-7xl">
+              Programs designed to
+              <span className="block text-[#75C8FF]">unlock potential.</span>
+            </h1>
+            <p className="mt-7 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+              HSD works at the intersection of education, leadership, and
+              community development to build systems that help people move
+              from potential into practical opportunity.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-3 text-sm">
+              <Link
+                to="/"
+                className="font-medium text-white/65 transition-colors hover:text-[#75C8FF]"
+              >
+                Home
+              </Link>
+              <Icon name="chevron_right" className="text-white/40" />
+              <span className="font-semibold text-[#75C8FF]">What We Do</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section-shell">
         <div className="max-width-shell two-column-layout">

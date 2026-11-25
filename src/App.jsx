@@ -9,7 +9,12 @@ import WhatWeDo from './pages/WhatWeDo';
 import Partnerships from './pages/Partnerships';
 import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
-import OurImpact from './pages/OurImpact';
+import CommunityLearningHubs from './pages/CommunityLearningHubs';
+import DigitalSkillsSummits from './pages/DigitalSkillsSummits';
+import YouthLeadershipMobilization from './pages/YouthLeadershipMobilization';
+import EducatorPartnerships from './pages/EducatorPartnerships';
+import GrassrootsInnovationLabs from './pages/GrassrootsInnovationLabs';
+import GetInvolved from './pages/GetInvolved';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Contact from './pages/Contact';
@@ -36,10 +41,15 @@ function AppLayout() {
           <Route path="/" element={<Home />} />
           <Route path="/who-we-are" element={<About />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/partnerships" element={<Partnerships />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/community-learning-hubs" element={<CommunityLearningHubs />} />
+          <Route path="/projects/digital-skills-summits" element={<DigitalSkillsSummits />} />
+          <Route path="/projects/youth-leadership-mobilization" element={<YouthLeadershipMobilization />} />
+          <Route path="/projects/educator-partnerships" element={<EducatorPartnerships />} />
+          <Route path="/projects/grassroots-innovation-labs" element={<GrassrootsInnovationLabs />} />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
-          <Route path="/our-impact" element={<OurImpact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
