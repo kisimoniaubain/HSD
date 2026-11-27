@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
 
         {/* Main footer */}
-        <div className="grid grid-cols-1 gap-12 border-b border-white/10 pt-16 pb-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] lg:gap-10 lg:pt-20 lg:pb-10">
+        <div className="grid grid-cols-1 gap-12 border-b border-white/10 pt-16 pb-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.35fr_0.8fr_0.8fr_1.25fr_1.35fr] lg:gap-10 lg:pt-20 lg:pb-10">
 
           {/* Organization */}
           <div>
@@ -84,6 +84,21 @@ export default function Footer() {
               <li><Link to="/projects" className="transition-colors hover:text-[#75C8FF]">Featured Projects</Link></li>
               <li><Link to="/get-involved" className="transition-colors hover:text-[#75C8FF]">Get Involved</Link></li>
               <li><Link to="/contact" className="transition-colors hover:text-[#75C8FF]">Contact Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Programs */}
+          <div>
+            <h4 className="footer-section-heading text-sm font-bold uppercase tracking-[0.15em] text-[#0F92E4]">
+              Programs
+            </h4>
+
+            <ul className="space-y-2 text-xs text-white/65">
+              <li><Link to="/projects/community-learning-hubs" className="transition-colors hover:text-[#75C8FF]">Community Learning Hubs</Link></li>
+              <li><Link to="/projects/digital-skills-summits" className="transition-colors hover:text-[#75C8FF]">Digital Skills Summits</Link></li>
+              <li><Link to="/projects/youth-leadership-mobilization" className="transition-colors hover:text-[#75C8FF]">Youth Leadership Mobilization</Link></li>
+              <li><Link to="/projects/educator-partnerships" className="transition-colors hover:text-[#75C8FF]">Educator Partnerships</Link></li>
+              <li><Link to="/projects/grassroots-innovation-labs" className="transition-colors hover:text-[#75C8FF]">Grassroots Innovation Labs</Link></li>
             </ul>
           </div>
 

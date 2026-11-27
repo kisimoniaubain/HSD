@@ -90,6 +90,45 @@ h3 { font-size: 1.05rem; }
 }
 .footer-section-heading { margin-bottom: 32px; }
 
+.beneficiary-reveal {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.beneficiary-reveal.from-left {
+  transform: translateX(-80px);
+}
+
+.beneficiary-reveal.from-right {
+  transform: translateX(80px);
+}
+
+.beneficiary-reveal.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.beneficiary-carousel {
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.beneficiary-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .beneficiary-reveal,
+  .beneficiary-reveal.from-left,
+  .beneficiary-reveal.from-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
