@@ -58,27 +58,26 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="footer-section-heading text-sm font-bold uppercase tracking-[0.15em] text-white">
+            <h4 className="footer-section-heading text-sm font-bold uppercase tracking-[0.15em] text-[#0F92E4]">
               Quick Links
             </h4>
 
-            <ul className="space-y-2 text-sm text-white/65">
+            <ul className="space-y-2 text-xs text-white/65">
               <li><Link to="/" className="transition-colors hover:text-[#75C8FF]">Home</Link></li>
               <li><Link to="/who-we-are" className="transition-colors hover:text-[#75C8FF]">Who We Are</Link></li>
               <li><Link to="/what-we-do" className="transition-colors hover:text-[#75C8FF]">What We Do</Link></li>
               <li><Link to="/projects" className="transition-colors hover:text-[#75C8FF]">Our Projects</Link></li>
-              <li><Link to="/get-involved" className="transition-colors hover:text-[#75C8FF]">Get Involved</Link></li>
               <li><Link to="/blog" className="transition-colors hover:text-[#75C8FF]">Latest News</Link></li>
             </ul>
           </div>
 
           {/* Explore */}
           <div>
-            <h4 className="footer-section-heading text-sm font-bold uppercase tracking-[0.15em] text-white">
+            <h4 className="text-[#0F92E4] footer-section-heading text-sm font-bold uppercase tracking-[0.15em]">
               Explore
             </h4>
 
-            <ul className="space-y-2 text-sm text-white/65">
+            <ul className="space-y-2 text-xs text-white/65">
               <li><Link to="/partnerships" className="transition-colors hover:text-[#75C8FF]">Our Partners</Link></li>
               <li><Link to="/what-we-do" className="transition-colors hover:text-[#75C8FF]">Our Programs</Link></li>
               <li><Link to="/projects" className="transition-colors hover:text-[#75C8FF]">Featured Projects</Link></li>
@@ -104,7 +103,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="footer-section-heading text-sm font-bold uppercase tracking-[0.15em] text-white">
+            <h4 className="footer-section-heading text-sm font-bold uppercase tracking-[0.15em] text-[#0F92E4]">
               Get In Touch
             </h4>
 
@@ -162,6 +161,8 @@ export default function Footer() {
 </div>
 
       </div>
+            <div className="pointer-events-none absolute -bottom-28 right-40 h-56 w-56 rounded-full border-[25px] border-[#0F92E4]/20" />
+
     </footer>
   );
 }
